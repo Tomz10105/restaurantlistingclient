@@ -11,7 +11,7 @@ const RestaurantList = () => {
 
   useEffect(() => {
     axios
-      .get('https://vercel.com/tomz10105/restaurantlistingapi/api/restaurants')
+      .get('https://restaurantlistingapi.vercel.app/api/restaurants')
       .then(response => {
         setRestaurants(response.data);
         countRestaurantsByState(response.data);
