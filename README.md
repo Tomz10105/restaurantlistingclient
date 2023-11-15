@@ -1,70 +1,76 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Restaurant Listing App
 
-## Available Scripts
+This project is a ReactJS application that displays a categorized list of restaurants based on their location states. The application fetches restaurant data from a provided API endpoint and presents it in a user-friendly format.
 
-In the project directory, you can run:
+## Project Structure
 
-### `npm start`
+### Server-side (ExpressJS)
+The server-side code resides in the `proxy-server` folder. It utilizes ExpressJS to set up a middleware for CORS handling and defines a route to fetch restaurant data from the provided API endpoint.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Client-side (ReactJS)
+The client-side code is located in the `client` folder. It's a ReactJS application that utilizes React Router to navigate between different views/components. The main components include:
+- `Home`: Displays the homepage
+- `RestaurantList`: Displays the list of restaurants
+- `About`: About page
+- `NotFound`: 404 error page
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
+- Node.js
+- npm or yarn
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
+1. Clone this repository.
+2. Navigate to the `proxy-server` folder and run `npm install` to install server dependencies.
+3. Navigate to the `client` folder and run `npm install` to install client dependencies.
 
-### `npm run build`
+## Running the Application
+1. Start the server:
+   ```
+   cd proxy-server
+   npm start
+   ```
+   The server will run on port 5000.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Start the client:
+   ```
+   cd client
+   npm start
+   ```
+   The React app will run on port 3000.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## API Integration
+The Express server fetches restaurant data from the provided API endpoint: [https://nextjs-orpin-omega-98.vercel.app/api/restaurants](https://nextjs-orpin-omega-98.vercel.app/api/restaurants)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Deployment
+The application is deployed on Vercel and accessible via a public URL provided by Vercel.
 
-### `npm run eject`
+## Testing
+API testing can be performed using tools like Postman or `curl` before integrating it into the application.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Code Sharing
+The project is available on GitHub at [repository link](#insert-your-repository-link-here). The repository is public and accessible to view the codebase.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Expected Output
+The homepage of the application lists restaurants under categorized subtitles based on their locations, following a format similar to:
+```
+New York:
+- Restaurant 1
+- Restaurant 2
+- Restaurant 3
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Texas:
+- Restaurant 4
+- Restaurant 5
+- Restaurant 6
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Notes
+- The application is designed to be responsive and user-friendly.
+- Emphasis has been placed on maintaining clean and maintainable code practices.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to tailor the content to better fit your project's specifics and add more details or sections as needed. Adjust the placeholders like the repository link with the actual URLs and information specific to your deployment.
